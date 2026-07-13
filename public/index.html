@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Cassino</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Fake Cassino</h1>
+      <p>Faça login com qualquer ID e solicite um Pix fixo.</p>
+
+      <section id="login">
+        <label>
+          ID do usuário
+          <input id="userId" type="text" placeholder="seu-id" required />
+        </label>
+        <button id="login-btn" type="button">Login</button>
+      </section>
+
+      <section id="jogo" class="hidden">
+        <p>Saldo: R$ <span id="saldo">0.00</span></p>
+
+        <label>
+          Valor do depósito
+          <input id="valor" type="number" min="1" step="0.01" placeholder="50.00" required />
+        </label>
+
+        <button id="deposit-btn" type="button">Depositar</button>
+
+        <label>
+          Chave Pix
+          <input id="copiaecola" readonly placeholder="Pix aparecerá aqui" />
+        </label>
+
+        <p id="msg" class="result hidden"></p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
